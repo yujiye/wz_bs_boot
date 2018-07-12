@@ -76,12 +76,12 @@ public class TravelServiceImpl implements TravelService {
 		int nday = 0;
 		while(records == null || records.isEmpty()){
 			//获取今天的游客数量，循环保证数据断档时仍能取到历史数据
-			records = travelMapper.findTouristFolwHoursbak( nday );
+			records = travelMapper.findTouristFlowHours( nday );
 			nday++;
 		}
 		while (yesterdayRecords == null || yesterdayRecords.isEmpty()) {
 			//获取昨天的游客数量，循环保证数据断档时仍能取到历史数据
-			yesterdayRecords = travelMapper.findTouristFolwHoursbak( nday );
+			yesterdayRecords = travelMapper.findTouristFlowHours( nday );
 			nday++;
 		}
 		Map<String,String> yesterdayMap = travelRecordList2Map(yesterdayRecords);
