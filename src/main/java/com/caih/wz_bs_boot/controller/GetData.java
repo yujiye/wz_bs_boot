@@ -1,13 +1,7 @@
 package com.caih.wz_bs_boot.controller;
 
-import com.caih.wz_bs_boot.service.IhomeService;
-import com.caih.wz_bs_boot.service.MedicalService;
-import com.caih.wz_bs_boot.service.TrafficService;
-import com.caih.wz_bs_boot.service.TravelService;
-import com.caih.wz_bs_boot.vo.IhomeShow;
-import com.caih.wz_bs_boot.vo.MedicalShow;
-import com.caih.wz_bs_boot.vo.TrafficShow;
-import com.caih.wz_bs_boot.vo.TravelShow;
+import com.caih.wz_bs_boot.service.*;
+import com.caih.wz_bs_boot.vo.*;
 import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -28,15 +22,8 @@ public class GetData {
 	MedicalService medicalService;
     @Autowired
 	TravelService travelService;
-
-    @CrossOrigin(origins={"*"}, methods={RequestMethod.GET, RequestMethod.POST})
-    @RequestMapping("/getMapData.action")
-    @ResponseBody
-    public Map<String, String> getMapData(){
-        Map<String, String> map = new HashMap<String, String>();
-        map.put("key","value");
-        return map;
-    }
+	@Autowired
+	ApprovalService approvalService;
 
 	@CrossOrigin(origins={"*"}, methods={RequestMethod.GET, RequestMethod.POST})
 	@RequestMapping("/getIhomeData.action")
@@ -64,5 +51,12 @@ public class GetData {
 	@ResponseBody
 	public TravelShow getTravelData(){
 		return travelService.getShow();
+	}
+
+	@CrossOrigin(origins={"*"}, methods={RequestMethod.GET, RequestMethod.POST})
+	@RequestMapping("/getApprovalData.action")
+	@ResponseBody
+	public ApprovalShow getApprovalData(){
+		return approvalService.getShow();
 	}
 }

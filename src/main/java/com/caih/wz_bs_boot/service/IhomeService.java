@@ -3,5 +3,5 @@ package com.caih.wz_bs_boot.service;
 import com.caih.wz_bs_boot.vo.IhomeShow;
 
 public interface IhomeService {
-    public IhomeShow getShow();
+    IhomeShow getShow();
 }
