@@ -27,13 +27,13 @@ public class SwaggerConfig {
     @Bean
     public Docket demoApi() {
         return new Docket(DocumentationType.SWAGGER_2)
-                .groupName("demo")
+                .groupName("wz_ihome")
                 .genericModelSubstitutes(DeferredResult.class)
                 .useDefaultResponseMessages(false)
                 .forCodeGeneration(false)
                 .pathMapping("/")
                 .select()
-                .paths(Predicates.or(PathSelectors.regex("/demo/.*")))//过滤的接口
+                .paths(Predicates.or(PathSelectors.regex("/wz_ihome/.*")))//过滤的接口
                 .build()
                 .apiInfo(
                         new ApiInfo("DemoController相关接口",//大标题

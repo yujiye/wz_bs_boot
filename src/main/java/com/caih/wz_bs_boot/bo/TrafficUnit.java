@@ -1,26 +1,62 @@
 package com.caih.wz_bs_boot.bo;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+
+@ApiModel(value = "TrafficUnit", description = "TrafficUnit描述")
 public class TrafficUnit {
+    @ApiModelProperty(required = true, example = "1.5", value = "实时拥堵指数")
     private String current_index;
+
+    @ApiModelProperty(required = true, example = "TravelTouristUnit列表", value = "指数波动")
     private String week_rate;
 
+    @ApiModelProperty(required = true, example = "TravelTouristUnit列表", value = "高速/快速路道路拥堵指数")
     private String highway_index;
+
+    @ApiModelProperty(required = true, example = "TravelTouristUnit列表", value = "主干道路道路拥堵指数")
     private String general_way_index;
+
+    @ApiModelProperty(required = true, example = "TravelTouristUnit列表", value = "高速/快速路道路平均速度")
     private String highway_speed;
+
+    @ApiModelProperty(required = true, example = "TravelTouristUnit列表", value = "主干路平均速度")
     private String general_way_speed;
+
+    @ApiModelProperty(required = true, example = "TravelTouristUnit列表", value = "高速/快速路指数波动")
     private String highway_week_rate;
+
+    @ApiModelProperty(required = true, example = "TravelTouristUnit列表", value = "主干路指数波动")
     private String general_way_week_rate;
 
+    @ApiModelProperty(required = true, example = "TravelTouristUnit列表", value = "实时缓行里程")
     private String slowly;
+
+    @ApiModelProperty(required = true, example = "TravelTouristUnit列表", value = "实时拥堵里程")
     private String congest;
+
+    @ApiModelProperty(required = true, example = "TravelTouristUnit列表", value = "实时严重拥堵里程")
     private String serious;
+
+    @ApiModelProperty(required = true, example = "TravelTouristUnit列表", value = "通勤日/节假日平均值缓行里程")
     private String avg_slowly;
+
+    @ApiModelProperty(required = true, example = "TravelTouristUnit列表", value = "通勤日/节假日平均值拥堵里程")
     private String avg_congest;
+
+    @ApiModelProperty(required = true, example = "TravelTouristUnit列表", value = "通勤日/节假日平均值严重拥堵里程")
     private String avg_serious;
 
+    @ApiModelProperty(required = true, example = "TravelTouristUnit列表", value = "早高峰时间段")
     private String morning_hour;
+
+    @ApiModelProperty(required = true, example = "TravelTouristUnit列表", value = "早高峰拥堵指数")
     private String morning_index;
+
+    @ApiModelProperty(required = true, example = "TravelTouristUnit列表", value = "晚高峰时间段")
     private String evening_hour;
+
+    @ApiModelProperty(required = true, example = "TravelTouristUnit列表", value = "晚高峰拥堵指数")
     private String evening_index;
 
     public String getCurrent_index() {

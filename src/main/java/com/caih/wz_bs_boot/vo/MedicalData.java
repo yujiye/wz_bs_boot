@@ -1,17 +1,42 @@
 package com.caih.wz_bs_boot.vo;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+
+@ApiModel(value = "MedicalShow", description = "MedicalShow描述")
 public class MedicalData {
 
+	@ApiModelProperty(required = true, example = "MedicalData对象", value = "当前已接入机构")
 	private String orgNum;
+
+	@ApiModelProperty(required = true, example = "MedicalData对象", value = "当前已接入机构（市级）")
 	private String orgNumCity;
+
+	@ApiModelProperty(required = true, example = "MedicalData对象", value = "当前已接入机构（县级）")
 	private String orgNumCounty;
+
+	@ApiModelProperty(required = true, example = "MedicalData对象", value = "当前已接入机构（社区）")
 	private String orgNumCommunity;
+
+	@ApiModelProperty(required = true, example = "MedicalData对象", value = "健康卡数量（无数据）")
 	private String healthCardNum;//无接口
+
+	@ApiModelProperty(required = true, example = "MedicalData对象", value = "今日累计预约量")
 	private String dateResNum;
+
+	@ApiModelProperty(required = true, example = "MedicalData对象", value = "健康档案查询量")
 	private String healthRecordNum;
+
+	@ApiModelProperty(required = true, example = "MedicalData对象", value = "家庭医生签约量")
 	private String hcpSignedNum;
+
+	@ApiModelProperty(required = true, example = "MedicalData对象", value = "平台访问量（无数据）")
 	private String visitorNum;//无接口
+
+	@ApiModelProperty(required = true, example = "MedicalData对象", value = "日访问量（无数据）")
 	private String datevisitorNum;//无接口
+
+	@ApiModelProperty(required = true, example = "MedicalData对象", value = "日预约量（无数据）")
 	private String appointmentNum;//无接口
 	public String getOrgNum() {
 		return orgNum;

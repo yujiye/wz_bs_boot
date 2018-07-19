@@ -1,17 +1,30 @@
 package com.caih.wz_bs_boot.vo;
 
+import io.swagger.annotations.ApiModelProperty;
+
 public class ApprovalData {
     //当前排队人数
+    @ApiModelProperty(required = true, example = "30000", value = "当前排队人数")
     private String linenumber;
+
     //今日累计受理
+    @ApiModelProperty(required = true, example = "30000", value = "今日累计受理")
     private String accepttoday;
+
     //累计受理业务
+    @ApiModelProperty(required = true, example = "30000", value = "累计受理业务")
     private String acceptsum;
+
     //平均受理时长
+    @ApiModelProperty(required = true, example = "30000", value = "平均受理时长")
     private String acceptaverage;
+
     //在途业务
+    @ApiModelProperty(required = true, example = "30000", value = "在途业务")
     private String onwork;
+
     //出证总数&累计出证
+    @ApiModelProperty(required = true, example = "30000", value = "出证总数&累计出证")
     private String hallissuing;
 
     public String getLinenumber() {
